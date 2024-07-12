@@ -1,0 +1,31 @@
+def start_tap():
+    print("Your water is running. Save the water!")
+
+
+def stop_tap():
+    print("Please save the water for the planet.")
+
+
+def help_command():
+    print("Available commands:")
+    print("start - Start the tap")
+    print("stop - Stop the tap")
+    print("help - Show this help message")
+
+
+def tap_game():
+    while True:
+        command = input("Enter a command (start, stop, help): ").strip().lower()
+
+        if command == "start":
+            start_tap()
+        elif command == "stop":
+            stop_tap()
+        elif command == "help":
+            help_command()
+        else:
+            print("Invalid command. Please use 'help' to see the list of available commands.")
+
+
+# Start the game
+tap_game()
